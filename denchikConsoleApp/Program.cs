@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace denchikConsoleApp
+namespace denchikConsoleApp //поменяй!!
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            QuickStart.Task1();
+            QuickStart.Task2();
         }
     }
 }
