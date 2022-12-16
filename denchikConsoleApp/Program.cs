@@ -16,7 +16,13 @@ namespace denchikConsoleApp //поменяй!!
             //QuickStart.Task4();
             //QuickStart.Task5();
             //QuickStart.Task6();
-            QuickStart.Task7();
+            //QuickStart.Task7();
+            //QuickStart.Task8();
+            //QuickStart.Task9();
+            //QuickStart.Task10();
+            //QuickStart.Task11();
+            //QuickStart.Task12();
+            QuickStart.Task13();
         }
     }
 }

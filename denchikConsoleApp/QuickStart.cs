@@ -95,6 +95,7 @@ namespace denchikConsoleApp //поменяй!!
             Console.ReadLine();
             Console.Clear();
         }
+
         public static void Task6()
         {
             Console.WriteLine("Задача №6: Дано число a, не пользуясь ничем кроме умножения получить а в 4 степени за 2 операции");
@@ -106,6 +107,7 @@ namespace denchikConsoleApp //поменяй!!
             Console.ReadLine();
             Console.Clear();
         }
+
         public static void Task7()
         {
             Console.WriteLine("Задача №7: Дано число a, не пользуясь ничем кроме умножения получить а в 6 степени за 3 операции");
@@ -118,7 +120,104 @@ namespace denchikConsoleApp //поменяй!!
             Console.Clear();
         }
 
+        public static void Task8()
+        {
+            Console.WriteLine("Задача №8: Дана высота h, определить время падения камня на поверхность Земли с этой высоты");
+            if (!(Input("h", out double h))) { return; }
+            double t = Math.Sqrt(2 * h / 2);
+            Console.WriteLine($"Время равно {t}");
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
 
+        public static void Task9()
+        {
+            Console.WriteLine("Задача №9: Дана равнобедренная трапеция, у которой основания A и B, известен угол C при большем основании A. Найти площадь.");
+            if (!(Input("длинну большего основания", out double a))) { return; }
+            if (!(Input("длинну меньшего основания", out double b))) { return; }
+            if (!(Input("c", out double c))) { return; }
+            double d = (a - b) / 2;
+            double h = Math.Tan((c * Math.PI) / 180) * d;
+            double s = (a + b) / 2 * h;
+            Console.WriteLine($"Ответ: {s}");
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        public static void Task10()
+        {
+            if (!Input("x", out double x)) { return; }
+            if (!Input("y", out double y)) { return; }
+            double s = x * x + 4; 
+            double d = Math.Exp(-2*Math.Log(Math.Exp(-x)));
+            double b = (1 + y) * s * ((x + y) / d);
+            Console.WriteLine($"Ответ: {d}");
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        
+        public static void Task11()
+        {
+            Console.WriteLine("Задача №11: Даны 2 числа A и B, найти наименьшее и наибольшее число");
+            if (!(Input("a", out double a))) { return; }
+            if (!(Input("b", out double b))) { return; }
+            double min, max;
+            if (a<b) { min = a; max = b; }
+            else { min = b; max = a; }
+            Console.WriteLine($"Наименьшее число: {min}");
+            Console.WriteLine($"Наибольшее число: {max}");
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        
+        public static void Task12()
+        {
+            Console.WriteLine("Задача №12: Даны 3 числа A и B и C, найти наименьшее и наибольшее число");
+            if (!(Input("a", out double a))) { return; }
+            if (!(Input("b", out double b))) { return; }
+            if (!(Input("c", out double c))) { return; }
+            double min, max;
+            if (a < c)
+            {
+                if (a < b) { min = a; }
+                else { min = b; }
+            }
+            else
+            {
+                if (c < b) { min = c; }
+                else { min = b; }
+            }
+            if (a > c)
+            {
+                if (a > b) { max = a; }
+                else { max = b; }
+            }
+            else
+            {
+                if (c > b) { max = c; }
+                else { max = b; }
+            }
+            Console.WriteLine($"Наименьшее число: {min}");
+            Console.WriteLine($"Наибольшее число: {max}");
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        public static void Task13()
+        {
+            Console.WriteLine("Задача №13: Используя лишь +, -, * вычислить 2a^4-3a^3+4a^2-5a+6 за 4 операции каждого типа");
+            if (!(Input("a", out double a))) { return; }
+            double b = (((2 * a - 3) * a + 4) * a - 5) * a + 6;
+            Console.WriteLine($"Ответ: {b}");
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
 
         public static bool Input(string name, out double a)
         {
