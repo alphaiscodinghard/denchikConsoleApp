@@ -20,7 +20,7 @@ namespace denchikConsoleApp //поменяй!!
             double df = (double)a / b; // деление
 
             // вывод результата
-            Console.WriteLine("a + b = ");
+            Console.Write("a + b = ");
             Console.WriteLine(sum);
             Console.Write("a * b = ");
             Console.WriteLine(prod);
@@ -100,8 +100,8 @@ namespace denchikConsoleApp //поменяй!!
         {
             Console.WriteLine("Задача №6: Дано число a, не пользуясь ничем кроме умножения получить а в 4 степени за 2 операции");
             if (!(Input("a", out double a))) { return; }
-            a = a * a;
-            a = a * a;
+            a *= a;
+            a *= a;
             Console.WriteLine($"Ответ: {a}");
             Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
             Console.ReadLine();
@@ -112,7 +112,7 @@ namespace denchikConsoleApp //поменяй!!
         {
             Console.WriteLine("Задача №7: Дано число a, не пользуясь ничем кроме умножения получить а в 6 степени за 3 операции");
             if (!(Input("a", out double a))) { return; }
-            a = a * a;
+            a *= a;
             a = a * a * a;
             Console.WriteLine($"Ответ: {a}");
             Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
@@ -153,7 +153,7 @@ namespace denchikConsoleApp //поменяй!!
             double s = x * x + 4; 
             double d = Math.Exp(-2*Math.Log(Math.Exp(-x)));
             double b = (1 + y) * s * ((x + y) / d);
-            Console.WriteLine($"Ответ: {d}");
+            Console.WriteLine($"Ответ: {b}");
             Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
             Console.ReadLine();
             Console.Clear();
@@ -214,6 +214,55 @@ namespace denchikConsoleApp //поменяй!!
             if (!(Input("a", out double a))) { return; }
             double b = (((2 * a - 3) * a + 4) * a - 5) * a + 6;
             Console.WriteLine($"Ответ: {b}");
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        
+        public static void Task14()
+        {
+            Console.WriteLine("Задача №14: Даны значения X и Y, надо вычислить выражение.");
+            if (!(Input("x", out double x))) { return; }
+            if (!(Input("y", out double y))) { return; }
+            double a = 1 + Math.Abs(y + x) + ((y - x) * (y - x) / 2) + (Math.Abs(y - x) * Math.Abs(y - x) * Math.Abs(y - x)) / 3;
+            Console.WriteLine($"Ответ: {a}");
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        public static void Task15()
+        {
+            Console.WriteLine("Задача №15: Даны числа a,b,c. Проверить, выполняется ли a < b < c.");
+            if (!(Input("a", out double a))) { return; }
+            if (!(Input("b", out double b))) { return; }
+            if (!(Input("c", out double c))) { return; }
+            if ( a < b & b < c )
+            {
+                Console.WriteLine("Выпоняется");
+            }
+            else
+            {
+                Console.WriteLine("Не выполняется");
+            }
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        public static void Task16()
+        {
+            Console.WriteLine("Задача №16: Даны числа a,b. Если a > b, то вывести a. Если нет, то вывести и a, и b.");
+            if (!(Input("a", out double a))) { return; }
+            if (!(Input("b", out double b))) { return; }
+            if (a > b)
+            {
+                Console.WriteLine($"Ответ: {a}");
+            }
+            else
+            {
+                Console.WriteLine($"Ответ: {a}, {b}");
+            }
             Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
             Console.ReadLine();
             Console.Clear();

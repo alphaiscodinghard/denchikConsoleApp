@@ -10,19 +10,22 @@ namespace denchikConsoleApp //поменяй!!
     {
         static void Main()
         {
-            //QuickStart.Task1();
-            //QuickStart.Task2();
-            //QuickStart.Task3();
-            //QuickStart.Task4();
-            //QuickStart.Task5();
-            //QuickStart.Task6();
-            //QuickStart.Task7();
-            //QuickStart.Task8();
-            //QuickStart.Task9();
-            //QuickStart.Task10();
-            //QuickStart.Task11();
-            //QuickStart.Task12();
+            QuickStart.Task1();
+            QuickStart.Task2();
+            QuickStart.Task3();
+            QuickStart.Task4();
+            QuickStart.Task5();
+            QuickStart.Task6();
+            QuickStart.Task7();
+            QuickStart.Task8();
+            QuickStart.Task9();
+            QuickStart.Task10();
+            QuickStart.Task11();
+            QuickStart.Task12();
             QuickStart.Task13();
+            QuickStart.Task14();
+            QuickStart.Task15();
+            QuickStart.Task16();
         }
     }
 }
