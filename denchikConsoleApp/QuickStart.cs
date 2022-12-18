@@ -268,6 +268,52 @@ namespace denchikConsoleApp //поменяй!!
             Console.Clear();
         }
 
+        public static void Task17()
+        {
+            Console.WriteLine("Задача №17: Даны числа X и Y. Меньшее из них заменить полусуммой, а большее удвоенным произведением.");
+            if (!(Input("x", out double x))) { return; }
+            if (!(Input("y", out double y))) { return; }
+            double d = 2 * (x * y);
+            double b = (x + y) / 2;
+            if (x > y)
+            {
+                x = d;
+                y = b;
+            }
+            else
+            {
+                y = d;
+                x = b;
+            }
+            Console.WriteLine($"Ответ: x = {x}; y = {y}.");
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        public static void Task18()
+        {
+            Console.WriteLine("Задача №18: Даны 3 числа a,b,c. Если a >= b >= c, то удовить эти числа, иначе заменить модулями");
+            if (!(Input("a", out double a))) { return; }
+            if (!(Input("b", out double b))) { return; }
+            if (!(Input("c", out double c))) { return; }
+            if (a >= b & b >= c)
+            {
+                a *= 2;
+                b *= 2;
+                c *= 2;
+            }
+            else
+            {
+                a = Math.Abs(a);
+                b = Math.Abs(b);
+                c = Math.Abs(c);
+            }
+            Console.WriteLine($"Ответ: a = {a}; b = {b}; c = {c}.");
+            Console.Write("Нажмите enter, чтобы перейти к следующей задаче...");
+            Console.ReadLine();
+            Console.Clear();
+        }
         public static bool Input(string name, out double a)
         {
             //string text = "Введите " + name + ": ";
